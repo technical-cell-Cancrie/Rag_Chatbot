@@ -95,6 +95,10 @@ RULES:
 - Use precise technical terminology from the context
 - Keep answers factual, concise, and grounded
 - Do not add external knowledge
+- Format answers in a clean, readable way
+- Use bullet points when appropriate
+- Highlight important technical values clearly
+- Explain findings naturally instead of copying chunks directly
 - Maximum 150 words
 
 CONTEXT:
