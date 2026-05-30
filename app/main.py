@@ -94,7 +94,10 @@ RULES:
   "I could not find that information in the knowledge base."
 - Use precise technical terminology from the context
 - Keep answers factual, concise, and grounded
-- For any query regarding general improvement, answer for different chemistries with validation
+- Put each bullet point on a new line
+- Leave a blank line between sections
+- Format answers with proper spacing for readability
+- Never combine multiple bullet points in a single line
 - Format answers in a clean, readable way
 - Use bullet points when appropriate
 - Highlight important technical values clearly
