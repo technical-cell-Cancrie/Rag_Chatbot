@@ -113,7 +113,7 @@ QUESTION:
 
     response = client.chat.completions.create(
         model="llama-3.1-8b-instant",
-        temperature=0.1,
+        temperature=0.3,
         messages=[
             {
                 "role": "user",
