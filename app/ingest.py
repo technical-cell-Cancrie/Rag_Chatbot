@@ -10,7 +10,7 @@ import chromadb
 
 # FREE local embedding model
 Settings.embed_model = HuggingFaceEmbedding(
-    model_name="BAAI/bge-small-en-v1.5"
+    model_name="BAAI/bge-large-en-v1.5"
 )
 
 # load documents
