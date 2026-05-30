@@ -30,7 +30,7 @@ app.add_middleware(
 
 # FREE local embeddings
 Settings.embed_model = HuggingFaceEmbedding(
-    model_name="BAAI/bge-small-en-v1.5"
+    model_name="BAAI/bge-large-en-v1.5"
 )
 
 # Groq client
@@ -62,7 +62,7 @@ index = VectorStoreIndex.from_vector_store(
 
 # Retriever
 retriever = index.as_retriever(
-    similarity_top_k=3
+    similarity_top_k=10
 )
 
 @app.get("/")
@@ -83,16 +83,19 @@ def chat(q: str):
 
     # anti hallucination prompt
     prompt = f"""
-You are a customer support assistant for Cancrie.
+You are Cancrie's technical AI assistant.
 
-Answer ONLY from the provided context.
+Answer ONLY using the provided context.
 
 RULES:
-- Do not hallucinate
-- If answer is not present, say:
-  "I could not find that information."
-- Keep answers concise
-- Maximum 120 words
+- Do NOT invent information
+- Do NOT make assumptions
+- If information is not present in the context, say:
+  "I could not find that information in the knowledge base."
+- Use precise technical terminology from the context
+- Keep answers factual, concise, and grounded
+- Do not add external knowledge
+- Maximum 150 words
 
 CONTEXT:
 {context}
