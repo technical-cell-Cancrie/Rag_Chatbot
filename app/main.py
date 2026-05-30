@@ -94,7 +94,7 @@ RULES:
   "I could not find that information in the knowledge base."
 - Use precise technical terminology from the context
 - Keep answers factual, concise, and grounded
-- Do not add external knowledge
+- For any query regarding general improvement, answer for different chemistries with validation
 - Format answers in a clean, readable way
 - Use bullet points when appropriate
 - Highlight important technical values clearly
